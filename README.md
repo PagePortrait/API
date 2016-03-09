@@ -25,7 +25,7 @@ cb({
 ```
 
 **Moz Data API:**
-http://api.pageportrait.com/mozdata?url=http://scalr.com&jsonp=cb
+http://api.pageportrait.com/mozdata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "url-metrics": {
@@ -81,7 +81,7 @@ cb({
 
 
 **Page Data API:**
-http://api.pageportrait.com/pagedata?url=http://scalr.com&jsonp=cb
+http://api.pageportrait.com/pagedata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "headings": {
@@ -158,7 +158,7 @@ cb({
 ```
 
 **Google API:**
-http://api.pageportrait.com/google?url=http://ya.ru&jsonp=cb
+http://api.pageportrait.com/google?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "pagerank": "6",
@@ -207,7 +207,7 @@ cb({
 ```
 
 **Alexa API:**
-http://api.pageportrait.com/alexa?url=http://ya.ru&jsonp=cb
+http://api.pageportrait.com/alexa?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "sd": [{
@@ -220,7 +220,7 @@ cb({
 ```
 
 **Content API (Proxy):**
-http://api.pageportrait.com/content?url=http://ya.ru&jsonp=cb
+http://api.pageportrait.com/content?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "content": "<!DOCTYPE html><html>...</html>",
