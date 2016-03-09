@@ -12,7 +12,7 @@ cb([{
 ```
 
 **Whois Data API:**  
-http://api.pageportrait.com/whois?url=http://www.pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/whois?url=http://www.pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "status": "clienttransferprohibited",
@@ -25,7 +25,7 @@ cb({
 ```
 
 **Moz Data API:**
-http://api.pageportrait.com/mozdata?url=http://pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/mozdata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "url-metrics": {
@@ -81,7 +81,7 @@ cb({
 
 
 **Page Data API:**
-http://api.pageportrait.com/pagedata?url=http://pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/pagedata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "headings": {
@@ -95,7 +95,7 @@ cb({
 ```
 
 **Http Data API:**
-http://api.pageportrait.com/httpdata?url=http://pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/httpdata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "accept-ranges": "bytes",
@@ -116,7 +116,7 @@ cb({
 ```
 
 **Meta Tags API:**
-http://api.pageportrait.com/metatags?url=http://pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/metatags?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "og:image": "http://pageportrait.com/images/logo-600x455.png",
@@ -134,13 +134,13 @@ cb({
 ```
 
 **Web Files API:**
-http://api.pageportrait.com/webfiles?url=http://pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/webfiles?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({"favicon.ico": 200, "sitemap.xml": 404, "robots.txt": 200});
 ```
 
 **Audience API:**
-http://api.pageportrait.com/audience?url=http://ya.ru&jsonp=cb
+http://api.pageportrait.com/v1/audience?url=http://ya.ru&jsonp=cb
 ```javascript
 cb({
   "demographics": {
@@ -158,7 +158,7 @@ cb({
 ```
 
 **Google API:**
-http://api.pageportrait.com/google?url=http://pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/google?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "pagerank": "6",
@@ -207,7 +207,7 @@ cb({
 ```
 
 **Alexa API:**
-http://api.pageportrait.com/alexa?url=http://pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/alexa?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "sd": [{
@@ -220,7 +220,7 @@ cb({
 ```
 
 **Content API (Proxy):**
-http://api.pageportrait.com/content?url=http://pageportrait.com&jsonp=cb
+http://api.pageportrait.com/v1/content?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "content": "<!DOCTYPE html><html>...</html>",
