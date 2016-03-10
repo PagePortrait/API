@@ -40,37 +40,7 @@ cb({
     "umrr": 6.1701933925681174e-12,
     "fmrr": 9.7122428262553772e-11,
     "pda": 14.67511781146467
-  },
-  "links": [
-    {
-      "luut": "",
-      "luuu": "dtm.io/",
-      "luus": 301,
-      "umrp": 4.1936076839988887,
-      "umrr": 4.0245995151667347e-12,
-      "uid": 7,
-      "fmrp": 3.2010889051465945,
-      "fmrr": 8.4670054483746281e-11,
-      "luulc": 1452174968,
-      "lrid": 848552137539,
-      "lupda": 14.67511781146467,
-      "luupa": 26.547443736457613,
-      "ltgt": 112160053675,
-      "luumrr": 6.1701933925681174e-12,
-      "lufmrr": 9.7122428262553772e-11,
-      "lufmrp": 3.2547594108683562,
-      "lsrc": 112161473503,
-      "uu": "datamart.github.io/Greylock/",
-      "ut": "Greylock Data Visualization Library",
-      "us": 200,
-      "upa": 31.587025270911575,
-      "luuid": 17,
-      "ulc": 1448163007,
-      "luumrp": 4.3145646016318189,
-      "pda": 93.605381912896547
-    },
-    ...
-  ]
+  }
 });
 ```
 *Example of Moz data report:* https://moz.com/researchtools/ose/links?site=scalr.com
