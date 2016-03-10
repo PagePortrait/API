@@ -43,10 +43,8 @@ cb({
   }
 });
 ```
-*Example of Moz data report:* https://moz.com/researchtools/ose/links?site=scalr.com
-*Response fields references:*
-- https://moz.com/help/guides/moz-api/mozscape/api-reference/url-metrics
-- https://moz.com/help/guides/moz-api/mozscape/api-reference/link-metrics
+*Example of Moz data report:* https://moz.com/researchtools/ose/links?site=scalr.com  
+*Response fields references:* https://moz.com/help/guides/moz-api/mozscape/api-reference/url-metrics
 
 
 
