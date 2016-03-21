@@ -1,18 +1,17 @@
 # API
 
-**Facebook API:**  
-http://api.pageportrait.com/v1/fb?url=http://pageportrait.com&jsonp=cb
+**Social API:** 
+https://api.pageportrait.com/v1/social?url=http://pageportrait.com&jsonp=cb
 ```javascript
-cb([{
-  "total_count": 1650,
-  "comment_count": 18,
-  "like_count": 46,
-  "share_count": 1586
-}]);
+cb({
+  "facebook": {"comment": 0, "total": 4, "likes": 0, "shares": 4},
+  "gplusone": {"count": 0},
+  "linkedin": {"shares": 4}
+});
 ```
 
 **Whois Data API:**  
-http://api.pageportrait.com/v1/whois?url=http://www.pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/whois?url=http://www.pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "status": "clienttransferprohibited",
@@ -25,7 +24,7 @@ cb({
 ```
 
 **Moz Data API:**
-http://api.pageportrait.com/v1/mozdata?url=http://pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/mozdata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "url-metrics": {
@@ -49,7 +48,7 @@ cb({
 
 
 **Page Data API:**
-http://api.pageportrait.com/v1/pagedata?url=http://pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/pagedata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "headings": {
@@ -63,7 +62,7 @@ cb({
 ```
 
 **Http Data API:**
-http://api.pageportrait.com/v1/httpdata?url=http://pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/httpdata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "accept-ranges": "bytes",
@@ -84,7 +83,7 @@ cb({
 ```
 
 **Meta Tags API:**
-http://api.pageportrait.com/v1/metatags?url=http://pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/metatags?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "og:image": "http://pageportrait.com/images/logo-600x455.png",
@@ -102,13 +101,13 @@ cb({
 ```
 
 **Web Files API:**
-http://api.pageportrait.com/v1/webfiles?url=http://pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/webfiles?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({"favicon.ico": 200, "sitemap.xml": 404, "robots.txt": 200});
 ```
 
 **Audience API:**
-http://api.pageportrait.com/v1/audience?url=http://ya.ru&jsonp=cb
+https://api.pageportrait.com/v1/audience?url=http://ya.ru&jsonp=cb
 ```javascript
 cb({
   "demographics": {
@@ -126,7 +125,7 @@ cb({
 ```
 
 **Google API:**
-http://api.pageportrait.com/v1/google?url=http://pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/google?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "pagerank": "6",
@@ -175,20 +174,34 @@ cb({
 ```
 
 **Alexa API:**
-http://api.pageportrait.com/v1/alexa?url=http://pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/alexa?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
-  "sd": [{
-    "country": {"code": "RU", "name": "Russia", "rank": "188"},
-    "popularity": {"text": "3678", "source": "panel"},
-    "reach": {"rank": "2375"},
-    "rank": {"delta": "+424"}
-  }]
+  "country": {"name": "Ukraine", "rank": "22867"},
+  "global": {"rank": "3084726", "delta": "-6547191"}
+});
+```
+
+**Audience API:**
+https://api.pageportrait.com/v1/audience?url=http://pageportrait.com&jsonp=cb
+```javascript
+cb({
+  "demographics": {
+    "gender": {"male": 0, "female": 0},
+    "education": {"some-college": 0, "graduate-school": 0, "college": 0, "no-college": 0},
+    "location": {"school": 0, "work": 0, "home": 0, "caucasian": 0}
+  },
+  "engagement": {
+    "search-visits": {"value": "7.10", "delta": null},
+    "bounce-rate": {"value": "7.10", "delta": null},
+    "pageviews": {"value": "4.00", "delta": "300"},
+    "time-on-site": {"value": "7:31", "delta": null}
+  }
 });
 ```
 
 **Content API (Proxy):**
-http://api.pageportrait.com/v1/content?url=http://pageportrait.com&jsonp=cb
+https://api.pageportrait.com/v1/content?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
   "content": "<!DOCTYPE html><html>...</html>",
