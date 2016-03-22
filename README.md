@@ -182,24 +182,6 @@ cb({
 });
 ```
 
-**Audience API:**
-https://api.pageportrait.com/v1/audience?url=http://pageportrait.com&jsonp=cb
-```javascript
-cb({
-  "demographics": {
-    "gender": {"male": 0, "female": 0},
-    "education": {"some-college": 0, "graduate-school": 0, "college": 0, "no-college": 0},
-    "location": {"school": 0, "work": 0, "home": 0, "caucasian": 0}
-  },
-  "engagement": {
-    "search-visits": {"value": "7.10", "delta": null},
-    "bounce-rate": {"value": "7.10", "delta": null},
-    "pageviews": {"value": "4.00", "delta": "300"},
-    "time-on-site": {"value": "7:31", "delta": null}
-  }
-});
-```
-
 **Content API (Proxy):**
 https://api.pageportrait.com/v1/content?url=http://pageportrait.com&jsonp=cb
 ```javascript
