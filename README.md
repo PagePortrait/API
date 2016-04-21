@@ -27,19 +27,9 @@ cb({
 https://api.pageportrait.com/v1/mozdata?url=http://pageportrait.com&jsonp=cb
 ```javascript
 cb({
-  "url-metrics": {
-    "uid": 17,
-    "uu": "dtm.io/",
-    "ut": "",
-    "us": 301,
-    "upa": 26.547443736457613,
-    "ulc": 1452174968,
-    "umrp": 4.3145646016318189,
-    "fmrp": 3.2547594108683562,
-    "umrr": 6.1701933925681174e-12,
-    "fmrr": 9.7122428262553772e-11,
-    "pda": 14.67511781146467
-  }
+  "domain-authority": 10.025181014176077,
+  "links": 0,
+  "page-authority": 1
 });
 ```
 *Example of Moz data report:* https://moz.com/researchtools/ose/links?site=scalr.com  
