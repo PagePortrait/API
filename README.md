@@ -1,4 +1,4 @@
-# API
+# API [![Build Status](https://api.travis-ci.org/PagePortrait/API.svg?branch=master)](http://travis-ci.org/PagePortrait/API)
 
 **Social API:** 
 https://api.pageportrait.com/v1/social?url=http://pageportrait.com&jsonp=cb
