@@ -1,0 +1,48 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# http://google.github.io/styleguide/pyguide.html
+
+import json
+import urllib2
+import sys
+
+
+API_URL = 'https://api.pageportrait.com/v1/'
+
+MAPPING = {
+  'social': ('facebook', 'gplusone', 'linkedin'),
+  'whois': ('status', 'updated', 'created', 'ip', 'registrar', 'expired'),
+  'mozdata': ('domain-authority', 'links', 'page-authority'),
+  'webfiles': ('favicon.ico', 'sitemap.xml', 'robots.txt'),
+  'audience': ('demographics', 'engagement'),
+  'google': ('safebrowsing', 'mobile', 'pagespeed'),
+  'alexa': ('country', 'global'),
+  'content': ('content', 'status', 'headers'),
+  'pagerank': ('value', )
+}
+
+def run():
+    """Runs tests."""
+    for action in MAPPING:
+        print 'Running action: %s' % action
+        url = API_URL + action + '?url=https://www.pageportrait.com&key=APITEST'
+        obj = _get_json(url)
+        handler = MAPPING[action]
+        keys = obj.keys()
+        if type(handler) in (tuple, list):
+            for key in handler:
+                if key not in keys:
+                    print 'Action "%s": Key "%s" not in list ["%s"]' % (
+                          action, key, '", "'.join(keys))
+                    sys.exit(1)
+
+
+def _get_json(url):
+    """Gets JSON object by API URL."""
+    response = urllib2.urlopen(url)
+    content = response.read()
+    return json.loads(content)
+
+
+if __name__ == '__main__':
+    run()
