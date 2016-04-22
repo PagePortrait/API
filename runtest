@@ -18,7 +18,8 @@ MAPPING = {
   'google': ('safebrowsing', 'mobile', 'pagespeed'),
   'alexa': ('country', 'global'),
   'content': ('content', 'status', 'headers'),
-  'pagerank': ('value', )
+  'pagerank': ('value', ),
+  'microdata': ('errors', 'tripleGroups', 'totalNumErrors', 'totalNumWarnings')
 }
 
 def run():
