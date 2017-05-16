@@ -1,105 +1,41 @@
 # API [![Build Status](https://api.travis-ci.org/PagePortrait/API.svg?branch=master)](http://travis-ci.org/PagePortrait/API)
 
-**Social API:** 
-https://api.pageportrait.com/v1/social?url=http://pageportrait.com&jsonp=cb
-```javascript
-cb({
-  "facebook": {"comment": 0, "total": 4, "likes": 0, "shares": 4},
-  "gplusone": {"count": 0},
-  "linkedin": {"shares": 4}
-});
+### Common
+
+**Parameters**
+```
+url - String. The webpage URL.
+key - String. The request authentication key.
+jsonp - String. Optional callback function name.
 ```
 
-**Whois Data API:**  
-https://api.pageportrait.com/v1/whois?url=http://www.pageportrait.com&jsonp=cb
-```javascript
-cb({
-  "status": "clienttransferprohibited",
-  "updated": "25-jan-2016",
-  "created": "16-apr-2015",
-  "ip": "184.73.223.98",
-  "registrar": "google inc.",
-  "expired": "16-apr-2017"
-});
+
+### Alexa API
+
+**URL**
+```
+https://api.pageportrait.com/v1/alexa
 ```
 
-**Moz Data API:**
-https://api.pageportrait.com/v1/mozdata?url=http://pageportrait.com&jsonp=cb
+**Response**
 ```javascript
-cb({
-  "domain-authority": 10.025181014176077,
-  "links": 0,
-  "page-authority": 1
-});
-```
-*Example of Moz data report:* https://moz.com/researchtools/ose/links?site=scalr.com  
-*Response fields references:* https://moz.com/help/guides/moz-api/mozscape/api-reference/url-metrics
-
-
-
-**Page Data API:**
-https://api.pageportrait.com/v1/pagedata?url=http://pageportrait.com&jsonp=cb
-```javascript
-cb({
-  "headings": {
-    "h2": ["Testimonials", "Contacts"],
-    "h3": ["Case studies", "Choose your Scalr"],
-    "h4": ["The Policy driven Cloud Management Platform"],
-    "h5": ["Enterprise edition", "Community Edition", "Follow us"],
-    "h6": ["Scalr", "Resources", "Head office"]
-  }
-});
+{
+  "country": {"name": "Ukraine", "rank": "22867"},
+  "global": {"rank": "3084726", "delta": "-6547191"}
+}
 ```
 
-**Http Data API:**
-https://api.pageportrait.com/v1/httpdata?url=http://pageportrait.com&jsonp=cb
-```javascript
-cb({
-  "accept-ranges": "bytes",
-  "content-length": "2038",
-  "content-language": "en-US",
-  "content-encoding": "gzip",
-  "content-type": "text/html; charset=UTF-8",
-  "cache-control": "max-age=86400, public",
-  "cache-public": true,
-  "server": "Apache/2.2.22 (Debian)",
-  "server-name": "Apache",
-  "server-version": "2.2.22",
-  "server-signature": true,
-  "vary": "Accept-Encoding",
-  "connection": "close",
-  "date": "Wed, 03 Feb 2016 21:13:26 GMT"
- });
+
+### Audience API
+
+**URL**
+```
+https://api.pageportrait.com/v1/audience
 ```
 
-**Meta Tags API:**
-https://api.pageportrait.com/v1/metatags?url=http://pageportrait.com&jsonp=cb
+**Response**
 ```javascript
-cb({
-  "og:image": "http://pageportrait.com/images/logo-600x455.png",
-  "description": "What does your page mean in a digital world? Discover your digital page portrait.",
-  "twitter:card": "summary",
-  "url": "http://pageportrait.com",
-  "image": "http://pageportrait.com/images/logo-120x90.png",
-  "og:description": "What does your page mean in a digital world? Discover your digital page portrait.",
-  "og:title": "Instant Digital Page Portrait",
-  "twitter:site": "@vpodk",
-  "twitter:url": "http://pageportrait.com",
-  "content-type": "text/html; charset=utf-8",
-  "viewport": "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"
-});
-```
-
-**Web Files API:**
-https://api.pageportrait.com/v1/webfiles?url=http://pageportrait.com&jsonp=cb
-```javascript
-cb({"favicon.ico": 200, "sitemap.xml": 404, "robots.txt": 200});
-```
-
-**Audience API:**
-https://api.pageportrait.com/v1/audience?url=http://ya.ru&jsonp=cb
-```javascript
-cb({
+{
   "demographics": {
     "gender": {"male": 89, "female": 0},
     "education": {"college": 0, "no-college": 0, "graduate-school": 69, "some-college": 0},
@@ -111,13 +47,57 @@ cb({
     "bounce-rate": {"value": "32.90", "delta": "-13"},
     "time-on-site": {"value": "7:55", "delta": "62"}
   }
-});
+}
 ```
 
-**Google API:**
-https://api.pageportrait.com/v1/google?url=http://pageportrait.com&jsonp=cb
+
+### AWIS API (Alexa Web Information Service)
+
+**URL**
+```
+https://api.pageportrait.com/v1/awis
+```
+
+**Response**
 ```javascript
-cb({
+{
+  "engagement": {"pageviews": {"value": 1.01, "delta": -1.94}},
+  "links": "18796",
+  "country": {"rank": 4912.0, "name": "VN"},
+  "global": {"delta": -10865.0, "rank": 8336.0},
+  "geo": [["IN", 2.6, 9628.0, 2.6], ["UA", 2.3, 1188.0, 2.3], ["DE", 3.3, 5763.0, 3.3]],
+  "speed": {"percentile": "88", "loadtime": "750"}
+}
+```
+
+
+### Content API (Proxy)
+
+**URL**
+```
+https://api.pageportrait.com/v1/content
+```
+
+**Response**
+```javascript
+{
+  "content": "<!DOCTYPE html><html>...</html>",
+  "status": 200,
+  "headers": { ... }
+}
+```
+
+
+### Google API
+
+**URL**
+```
+https://api.pageportrait.com/v1/google
+```
+
+**Response**
+```javascript
+{
   "pagerank": "6",
   "safebrowsing": "ok",
   "mobile": {
@@ -160,35 +140,205 @@ cb({
       "numberJsResources": 5
     }
   }
-});
+}
 ```
 
-**Alexa API:**
-https://api.pageportrait.com/v1/alexa?url=http://pageportrait.com&jsonp=cb
-```javascript
-cb({
-  "country": {"name": "Ukraine", "rank": "22867"},
-  "global": {"rank": "3084726", "delta": "-6547191"}
-});
+
+### Http Data API
+
+**URL**
+```
+https://api.pageportrait.com/v1/httpdata
 ```
 
-**Content API (Proxy):**
-https://api.pageportrait.com/v1/content?url=http://pageportrait.com&jsonp=cb
+**Response**
 ```javascript
-cb({
-  "content": "<!DOCTYPE html><html>...</html>",
-  "status": 200,
-  "headers": {
-    "content-encoding": "gzip",
-    "expires": "Wed, 03 Feb 2016 13:29:45 GMT",
-    "server": "nginx",
-    "last-modified": "Wed, 03 Feb 2016 13:29:45 GMT",
-    "connection": "close",
-    "cache-control": "no-cache,no-store,max-age=0,must-revalidate",
-    "date": "Wed, 03 Feb 2016 13:29:45 GMT",
-    "content-type": "text/html; charset=UTF-8",
-    "x-frame-options": "DENY",
-    ...
+{
+  "accept-ranges": "bytes",
+  "content-length": "2038",
+  "content-language": "en-US",
+  "content-encoding": "gzip",
+  "content-type": "text/html; charset=UTF-8",
+  "cache-control": "max-age=86400, public",
+  "cache-public": true,
+  "server": "Apache/2.2.22 (Debian)",
+  "server-name": "Apache",
+  "server-version": "2.2.22",
+  "server-signature": true,
+  "vary": "Accept-Encoding",
+  "connection": "close",
+  "date": "Wed, 03 Feb 2016 21:13:26 GMT"
+}
+```
+
+
+### Http Headers API
+
+**URL**
+```
+https://api.pageportrait.com/v1/headers
+```
+
+**Response**
+```javascript
+{
+  "Location": "https://www.dtm.io/",
+  "Date": "Tue, 16 May 2017 20:29:24 GMT",
+  "Content-Type": "text/html; charset=iso-8859-1",
+  "Server": "Apache"
+}
+```
+
+
+### Meta Tags API
+
+**URL**
+```
+https://api.pageportrait.com/v1/metatags
+```
+
+**Response**
+```javascript
+{
+  "og:image": "http://pageportrait.com/images/logo-600x455.png",
+  "description": "What does your page mean in a digital world? Discover your digital page portrait.",
+  "twitter:card": "summary",
+  "url": "http://pageportrait.com",
+  "image": "http://pageportrait.com/images/logo-120x90.png",
+  "og:description": "What does your page mean in a digital world? Discover your digital page portrait.",
+  "og:title": "Instant Digital Page Portrait",
+  "twitter:site": "@vpodk",
+  "twitter:url": "http://pageportrait.com",
+  "content-type": "text/html; charset=utf-8",
+  "viewport": "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"
+}
+```
+
+
+### Moz Data API
+
+**URL**
+```
+https://api.pageportrait.com/v1/mozdata
+```
+
+**Response**
+```javascript
+{
+  "domain-authority": 10.025181014176077,
+  "links": 0,
+  "page-authority": 1
+}
+```
+
+
+### Page Data API
+
+**URL**
+```
+https://api.pageportrait.com/v1/pagedata
+```
+
+**Response**
+```javascript
+{
+  "emails": {"hr@dtm.io": 2},
+  "content-length": 40819,
+  "media-queries": {
+    "screen and (max-width:774px)": 3,
+    "screen and (min-width:1445px)": 1
+  },
+  "code-ratio": 4.916827947769422,
+  "description": "From Concept To Reality",
+  "headings": {
+    "h1": ["Accelerate"],
+    "h2": ["Datamart Services", "Datamart Partners", "Find Out More"]
+  },
+  "doctype": "DOCTYPE html",
+  "frames": {"framesets": 0, "iframes": 0},
+  "title": "Datamart - Accelerate Innovations",
+  "trackers": {"Google Analytics (Universal)": 1},
+  "embeds": {"total": 0, "applets": 0, "flash": 0},
+  "deprecated": {},
+  "images": {"unfriendly": 0, "vector": 7, "noalt": 0, "total": 20, "external": 0},
+  "styles": {"inline": 1, "total": 1},
+  "scripts": {"inline": 2, "total": 3},
+  "text-length": 2007,
+  "frameworks": {},
+  "meta": {
+    "name": ["Datamart - Accelerate Innovations"],
+    "twitter:card": ["summary_large_image"],
+    "viewport": ["user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"],
+    "description": ["From Concept To Reality"],
+    "og:title": ["Datamart - Accelerate Innovations"],
+    "og:description": ["From Concept To Reality"],
+    "og:type": ["website"],
+    "fb:app_id": ["344116085973021"],
+    "datepublished": ["2016-09-05"]
+  },
+  "links": {
+    "data": {
+      "/solutions/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Learn More"},
+      "mailto:hr@dtm.io": {"counter": 1, "follow": "follow", "type": "CTA", "anchor": ""},
+      "https://twitter.com": {"counter": 1, "follow": "follow", "type": "External", "anchor": "Follow"},
+      "/company/contact/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Contacts"},
+      "/open-source/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Open Source"},
+      "/company/contact/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Contact Us"},
+      "tel:+14157997500": {"counter": 1, "follow": "follow", "type": "CTA", "anchor": ""},
+      "https://www.dtm.io": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": ""},
+      "/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Datamart Home"}
+    },
+    "unfriendly": 0, "nofollow": 0, "total": 25, "friendly": 25, "external": 4, "underscored": 0
   }
-});
+}
+```
+
+
+### Social API
+
+**URL**
+```
+https://api.pageportrait.com/v1/social
+```
+
+**Response**
+```javascript
+{
+  "facebook": {"comment": 0, "total": 4, "likes": 0, "shares": 4},
+  "gplusone": {"count": 0},
+  "linkedin": {"shares": 4}
+}
+```
+
+
+### Web Files API
+
+**URL**
+```
+https://api.pageportrait.com/v1/webfiles
+```
+
+**Response**
+```javascript
+{"favicon.ico": 200, "sitemap.xml": 404, "robots.txt": 200}
+```
+
+
+### Whois Data API
+
+**URL**
+```
+https://api.pageportrait.com/v1/whois
+```
+
+**Response**
+```javascript
+{
+  "status": "clienttransferprohibited",
+  "updated": "25-jan-2016",
+  "created": "16-apr-2015",
+  "ip": "184.73.223.98",
+  "registrar": "google inc.",
+  "expired": "16-apr-2017"
+}
 ```
