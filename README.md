@@ -214,6 +214,11 @@ https://api.pageportrait.com/v1/metatags
 }
 ```
 
+**Notes**
+
+Depreacated. Please use [Page Data API](https://github.com/PagePortrait/API/blob/master/README.md#page-data-api) instaed.
+
+
 
 ### Moz Data API
 
