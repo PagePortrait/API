@@ -283,7 +283,6 @@ https://api.pageportrait.com/v1/pagedata
       "https://twitter.com": {"counter": 1, "follow": "follow", "type": "External", "anchor": "Follow"},
       "/company/contact/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Contacts"},
       "/open-source/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Open Source"},
-      "/company/contact/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Contact Us"},
       "tel:+14157997500": {"counter": 1, "follow": "follow", "type": "CTA", "anchor": ""},
       "https://www.dtm.io": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": ""},
       "/": {"counter": 1, "follow": "follow", "type": "Internal", "anchor": "Datamart Home"}
