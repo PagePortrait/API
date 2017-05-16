@@ -2,6 +2,11 @@
 
 ### Common
 
+**URL**
+```
+https://api.pageportrait.com/v1/
+```
+
 **Parameters**
 ```
 url - String. The webpage URL.
@@ -9,12 +14,16 @@ key - String. The request authentication key.
 jsonp - String. Optional callback function name.
 ```
 
+**Note**
+
+Use `https://pageportrait.com/api/v1/` as alternative URL.
+
 
 ### Alexa API
 
 **URL**
 ```
-https://api.pageportrait.com/v1/alexa
+GET https://api.pageportrait.com/v1/alexa
 ```
 
 **Response**
@@ -30,7 +39,7 @@ https://api.pageportrait.com/v1/alexa
 
 **URL**
 ```
-https://api.pageportrait.com/v1/audience
+GET https://api.pageportrait.com/v1/audience
 ```
 
 **Response**
@@ -55,7 +64,7 @@ https://api.pageportrait.com/v1/audience
 
 **URL**
 ```
-https://api.pageportrait.com/v1/awis
+GET https://api.pageportrait.com/v1/awis
 ```
 
 **Response**
@@ -75,7 +84,7 @@ https://api.pageportrait.com/v1/awis
 
 **URL**
 ```
-https://api.pageportrait.com/v1/content
+GET https://api.pageportrait.com/v1/content
 ```
 
 **Response**
@@ -92,7 +101,7 @@ https://api.pageportrait.com/v1/content
 
 **URL**
 ```
-https://api.pageportrait.com/v1/google
+GET https://api.pageportrait.com/v1/google
 ```
 
 **Response**
@@ -148,7 +157,7 @@ https://api.pageportrait.com/v1/google
 
 **URL**
 ```
-https://api.pageportrait.com/v1/httpdata
+GET https://api.pageportrait.com/v1/httpdata
 ```
 
 **Response**
@@ -176,7 +185,7 @@ https://api.pageportrait.com/v1/httpdata
 
 **URL**
 ```
-https://api.pageportrait.com/v1/headers
+GET https://api.pageportrait.com/v1/headers
 ```
 
 **Response**
@@ -194,7 +203,7 @@ https://api.pageportrait.com/v1/headers
 
 **URL**
 ```
-https://api.pageportrait.com/v1/metatags
+GET https://api.pageportrait.com/v1/metatags
 ```
 
 **Response**
@@ -224,7 +233,7 @@ Depreacated. Please use [Page Data API](https://github.com/PagePortrait/API/blob
 
 **URL**
 ```
-https://api.pageportrait.com/v1/mozdata
+GET https://api.pageportrait.com/v1/mozdata
 ```
 
 **Response**
@@ -241,7 +250,7 @@ https://api.pageportrait.com/v1/mozdata
 
 **URL**
 ```
-https://api.pageportrait.com/v1/pagedata
+GET https://api.pageportrait.com/v1/pagedata
 ```
 
 **Response**
@@ -302,7 +311,7 @@ https://api.pageportrait.com/v1/pagedata
 
 **URL**
 ```
-https://api.pageportrait.com/v1/social
+GET https://api.pageportrait.com/v1/social
 ```
 
 **Response**
@@ -319,7 +328,7 @@ https://api.pageportrait.com/v1/social
 
 **URL**
 ```
-https://api.pageportrait.com/v1/webfiles
+GET https://api.pageportrait.com/v1/webfiles
 ```
 
 **Response**
@@ -332,7 +341,7 @@ https://api.pageportrait.com/v1/webfiles
 
 **URL**
 ```
-https://api.pageportrait.com/v1/whois
+GET https://api.pageportrait.com/v1/whois
 ```
 
 **Response**
