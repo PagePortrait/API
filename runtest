@@ -12,7 +12,7 @@ API_URL = 'https://api.pageportrait.com/v1/'
 MAPPING = {
   'social': ('facebook', 'gplusone', 'linkedin'),
   'whois': ('status', 'updated', 'created', 'ip', 'registrar', 'expired'),
-  'mozdata': ('domain-authority', 'links', 'page-authority'),
+  # 'mozdata': ('domain-authority', 'links', 'page-authority'),
   'webfiles': ('favicon.ico', 'sitemap.xml', 'robots.txt'),
   'audience': ('demographics', 'engagement'),
   'google': ('safebrowsing', 'mobile', 'pagespeed'),
